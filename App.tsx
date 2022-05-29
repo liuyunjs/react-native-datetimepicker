@@ -11,8 +11,8 @@ export default function App() {
       </DateTimePicker>
       <DateTimePickerView
         minimum={dayjs('1970-01-03 00:00:00')}
-        mode="date"
-        // mode="custom"
+        // mode="date"
+        mode="custom"
         custom={[
           ['month', 'MM'],
           ['date', 'DD'],

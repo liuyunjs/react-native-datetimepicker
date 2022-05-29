@@ -1,12 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
 import dayjs, { Dayjs } from 'dayjs';
 import { useReactCallback } from '@liuyunjs/hooks/lib/useReactCallback';
 import { useReactionState } from '@liuyunjs/hooks/lib/useReactionState';
-import { PickerViewProps } from 'react-native-repicker/dist/PickerView';
+import { PickerView } from 'react-native-repicker';
 import { BasePicker, Mode } from './BasePicker';
 
-export type Props = Omit<PickerViewProps, 'onChange' | 'data' | 'selected'> & {
+export type DateTimePickerViewProps = Omit<
+  React.ComponentProps<typeof PickerView>,
+  'onChange' | 'data' | 'selected'
+> & {
   maximum?: Dayjs;
   minimum?: Dayjs;
   date?: Dayjs;
@@ -114,7 +117,7 @@ const preparse = (
   throw new Error('unknown mode');
 };
 
-export const DateTimePickerView: React.FC<Props> = ({
+export const DateTimePickerView: React.FC<DateTimePickerViewProps> = ({
   onChange,
   maximum,
   minimum,
@@ -181,7 +184,7 @@ export const DateTimePickerView: React.FC<Props> = ({
 };
 
 DateTimePickerView.defaultProps = {
-  maximum: dayjs('2100-12-31 00:00:00:000'),
+  maximum: dayjs('2100-12-08 00:00:00:000'),
   minimum: dayjs('1970-01-01 00:00:00:000'),
   mode: unitAndFormats[2][0],
 };

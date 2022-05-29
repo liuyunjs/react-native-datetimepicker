@@ -1,18 +1,19 @@
 {
-  "name": "react-native-datetimepicker",
-  "version": "0.0.1",
+  "name": "react-native-datetime-repicker",
+  "version": "2.0.0",
   "private": false,
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
   "scripts": {
-    "build": "rimraf ./dist; tsc",
+    "ios": "react-native run-ios",
+    "build": "rimraf ./dist; rollup -c rollup.config.js",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@liuyunjs/hooks": "^1.1.5",
-    "dayjs": "^1.10.6",
-    "react-native-repicker": "^1.1.0",
-    "rn-darkly": "^1.0.3"
+    "@liuyunjs/hooks": "^1",
+    "dayjs": "*",
+    "react-native-repicker": "^2",
+    "rn-darkly": "^2"
   },
   "peerDependencies": {
     "react": "17.0.1",
@@ -33,10 +34,13 @@
     "metro-react-native-babel-preset": "^0.64.0",
     "react": "17.0.1",
     "react-native": "0.64.1",
+    "react-native-gesture-handler": "^2.4.2",
     "react-native-linear-gradient": "^2.5.6",
-    "react-native-reanimated": "^2.2.0",
+    "react-native-reanimated": "^1.13.4",
     "react-test-renderer": "17.0.1",
+    "rollup": "^2.74.1",
+    "rollup-plugin-typescript2": "^0.31.2",
     "tslib": "^2.3.1",
-    "typescript": "^3.8.3"
+    "typescript": "^4.7.2"
   }
 }

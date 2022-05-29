@@ -1,6 +1,7 @@
 /**
  * @format
  */
+import 'react-native-gesture-handler';
 import 'react-native-smart-modal';
 import { AppRegistry } from 'react-native';
 import App from './App';

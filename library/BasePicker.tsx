@@ -1,9 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
-import {
-  PickerView,
-  PickerViewProps,
-} from 'react-native-repicker/dist/PickerView';
+import { PickerView } from 'react-native-repicker';
 import { useReactCallback } from '@liuyunjs/hooks/lib/useReactCallback';
 import dayjs from 'dayjs';
 
@@ -18,7 +15,10 @@ export type Mode =
   | 'second'
   | 'millisecond';
 
-export type Props = Omit<PickerViewProps, 'onChange' | 'data' | 'selected'> & {
+export type Props = Omit<
+  React.ComponentProps<typeof PickerView>,
+  'onChange' | 'data' | 'selected'
+> & {
   start: number;
   end: number;
   current: number;
