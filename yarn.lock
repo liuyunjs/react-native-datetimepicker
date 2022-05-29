@@ -5588,6 +5588,11 @@ react-native-gesture-handler@^2.4.2:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
+react-native-iphone-x-helper@*:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
+  integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
+
 react-native-linear-gradient@^2.5.6:
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
@@ -5605,13 +5610,14 @@ react-native-reanimated@^1.13.4:
   dependencies:
     fbjs "^1.0.0"
 
-react-native-repicker@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/react-native-repicker/-/react-native-repicker-2.0.5.tgz#8e883aad8cb01e7b2b69d4958974ec459300388d"
-  integrity sha512-4ZB2u1hRlggxEDE/TrJkWofKlkkDz8eL4Yzs4SQ32JYQYxPBrgVhadpqv8Wjs44guaJL9XF4dBKICQKXpEefGQ==
+react-native-repicker@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/react-native-repicker/-/react-native-repicker-2.0.7.tgz#e49800dbed565eae0d07b22905f2415bbf2ad3a8"
+  integrity sha512-BCS1T6rhjKplQj5BnBxURmTZGu+X4bi3rc39jqJqZcofzLR/JLclhih+lcD1Dj6Rj8wcQcC5Szj1jfn3NEZIMg==
   dependencies:
     "@liuyunjs/hooks" "^1"
     "@liuyunjs/utils" "^1"
+    react-native-iphone-x-helper "*"
     react-native-smart-modal "^2"
     rn-darkly "^2"
 

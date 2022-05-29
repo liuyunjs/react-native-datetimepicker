@@ -6,8 +6,13 @@ export { DateTimePickerView };
 
 const DateTimePickerInternal = withPicker(DateTimePickerView);
 
-export const DateTimePicker = darkly(DateTimePickerInternal, 'tintColor');
+export const DateTimePicker = darkly(
+  DateTimePickerInternal,
+  'tintColor',
+  'overlayColor',
+);
 
-DateTimePicker.defaultProps = {
-  dark_tintColor: Picker.defaultProps!.dark_tintColor,
-};
+// @ts-ignore
+DateTimePicker.defaultProps = Picker.defaultProps;
+
+console.log(DateTimePicker.defaultProps);
