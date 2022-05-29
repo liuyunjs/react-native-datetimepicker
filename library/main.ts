@@ -14,5 +14,3 @@ export const DateTimePicker = darkly(
 
 // @ts-ignore
 DateTimePicker.defaultProps = Picker.defaultProps;
-
-console.log(DateTimePicker.defaultProps);
