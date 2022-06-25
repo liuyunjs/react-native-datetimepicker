@@ -5600,7 +5600,7 @@ react-native-linear-gradient@^2.5.6:
 
 react-native-portal-view@^2:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-portal-view/-/react-native-portal-view-2.0.1.tgz#8a7a6aec2b36e74855a9cd46e7a59f8a4f253f92"
+  resolved "https://registry.npmjs.org/react-native-portal-view/-/react-native-portal-view-2.0.1.tgz#8a7a6aec2b36e74855a9cd46e7a59f8a4f253f92"
   integrity sha512-WZq2Zl30H6KHaB/njDNIJblf0Rk0pO1tfoWGbccl9QhrF4wSPBYEOAB1ggXOb+lkQH3RjWsTe4Fuu+FcWJvapg==
 
 react-native-reanimated@^1.13.4:
@@ -5610,26 +5610,26 @@ react-native-reanimated@^1.13.4:
   dependencies:
     fbjs "^1.0.0"
 
-react-native-repicker@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/react-native-repicker/-/react-native-repicker-2.0.7.tgz#e49800dbed565eae0d07b22905f2415bbf2ad3a8"
-  integrity sha512-BCS1T6rhjKplQj5BnBxURmTZGu+X4bi3rc39jqJqZcofzLR/JLclhih+lcD1Dj6Rj8wcQcC5Szj1jfn3NEZIMg==
+react-native-repicker@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/react-native-repicker/-/react-native-repicker-2.1.2.tgz#2f5fd7507a454c5c9bd4b44be4133cbe5d52c9b1"
+  integrity sha512-r11XM9klXamdTF2JbF7Twq5Xvl/TXi4wtzw8R/cIfYmlGfkqUj+pddHUBHvYGJqWW2FsspT+Hr2wHVupphBKkQ==
   dependencies:
     "@liuyunjs/hooks" "^1"
     "@liuyunjs/utils" "^1"
     react-native-iphone-x-helper "*"
-    react-native-smart-modal "^2"
+    react-native-smart-modal "^2.1.2"
     rn-darkly "^2"
 
-react-native-smart-modal@^2:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-smart-modal/-/react-native-smart-modal-2.0.0.tgz#6898d45206743b292c48a32270ba444aec65f01f"
-  integrity sha512-eDQtb9a+In9BQKioYPdd8Z32hrjuyWwtvMll/ar/i0KF6q6tmPnXiEkNb03qtvDhsU6dapR8pcd0RFO4dpahdg==
+react-native-smart-modal@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/react-native-smart-modal/-/react-native-smart-modal-2.1.2.tgz#3aa55bc4263e5e078fe99468d096800123a9f875"
+  integrity sha512-BROfwLI2jorh5iF3Rwh8cbSHDHgumk5IaMclZPYN90Sml33g1nBJeofCIWuEg5O0z1RukR4f11C4nH70K9St5Q==
   dependencies:
     "@liuyunjs/hooks" "^1"
     "@liuyunjs/utils" "^1"
     react-native-portal-view "^2"
-    rmotion "^2"
+    rmotion "^2.1.2"
     rn-darkly "^2"
     rn-mask "^2"
 
@@ -5962,6 +5962,17 @@ rmotion@^2:
     framer-motion "^4.1.17"
     hoist-non-react-statics "*"
 
+rmotion@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/rmotion/-/rmotion-2.1.2.tgz#f11868e082785ef12c223e3919f4f89e5958e7ed"
+  integrity sha512-eITnqWKcURjp0VcWU0AvjzF3B1MwPtiGvK8XyKFbSMQl52Fl4/WtNqnggE5hBaqvEUVdBuSmT1GbQf0kRX2iUQ==
+  dependencies:
+    "@liuyunjs/hooks" "^1"
+    "@liuyunjs/utils" "^1"
+    "@types/hoist-non-react-statics" "^3.3.1"
+    framer-motion "^4.1.17"
+    hoist-non-react-statics "*"
+
 rn-darkly@^2:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/rn-darkly/-/rn-darkly-2.0.0.tgz#6c30d7f78a2aa2a41041f88483da1129550909e8"
@@ -5972,7 +5983,7 @@ rn-darkly@^2:
 
 rn-mask@^2:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/rn-mask/-/rn-mask-2.0.0.tgz#cc216505cd01ae8465266ade2dc3a2c7f7e23f78"
+  resolved "https://registry.npmjs.org/rn-mask/-/rn-mask-2.0.0.tgz#cc216505cd01ae8465266ade2dc3a2c7f7e23f78"
   integrity sha512-dvKLD3NjkXd6P8w+I/j6sdIdfLUcMLgNT74NoUihKESQAaXp3iH9VXr4+qFWtprWBhnXGaojOa6s/+l+fpNiOQ==
   dependencies:
     rmotion "^2"

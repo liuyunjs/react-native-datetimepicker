@@ -8,12 +8,12 @@ import { BasePicker, Mode } from './BasePicker';
 
 export type DateTimePickerViewProps = Omit<
   React.ComponentProps<typeof PickerView>,
-  'onChange' | 'data' | 'selected'
+  'onChange' | 'data' | 'selected' | 'onSelected'
 > & {
   maximum?: Dayjs;
   minimum?: Dayjs;
   date?: Dayjs;
-  onChange?: (date: Dayjs) => void;
+  onSelected?: (date: Dayjs) => void;
 } & (
     | {
         mode?: Mode;
@@ -118,7 +118,7 @@ const preparse = (
 };
 
 export const DateTimePickerView: React.FC<DateTimePickerViewProps> = ({
-  onChange,
+  onSelected,
   maximum,
   minimum,
   date,
@@ -134,7 +134,7 @@ export const DateTimePickerView: React.FC<DateTimePickerViewProps> = ({
     clamp(minimum!, maximum!, unit, date),
   );
 
-  const onChangeCallback = useReactCallback(
+  const onSelectedCallback = useReactCallback(
     (m: Mode, { value }: { value: number; label: number | string }) => {
       if (clipDate.get(m) === value) return;
       const unitIndex = unitMap[m];
@@ -151,7 +151,7 @@ export const DateTimePickerView: React.FC<DateTimePickerViewProps> = ({
       }
 
       setClipDate(d);
-      onChange?.(d);
+      onSelected?.(d);
     },
   );
 
@@ -174,7 +174,7 @@ export const DateTimePickerView: React.FC<DateTimePickerViewProps> = ({
             end={end}
             key={item[0]}
             mode={item[0]}
-            onChange={onChangeCallback}
+            onSelected={onSelectedCallback}
             format={item[1]}
           />
         );

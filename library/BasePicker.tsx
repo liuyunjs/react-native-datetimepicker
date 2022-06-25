@@ -17,14 +17,14 @@ export type Mode =
 
 export type Props = Omit<
   React.ComponentProps<typeof PickerView>,
-  'onChange' | 'data' | 'selected'
+  'onSelected' | 'data' | 'selected' | 'onChange'
 > & {
   start: number;
   end: number;
   current: number;
   mode: Mode;
   format: string;
-  onChange: (
+  onSelected: (
     mode: Mode,
     selected: { value: number; label: string | number },
   ) => void;
@@ -36,7 +36,7 @@ let BasePicker: React.FC<Props> = ({
   end,
   mode,
   format,
-  onChange,
+  onSelected,
   ...rest
 }) => {
   const data = React.useMemo(() => {
@@ -50,15 +50,15 @@ let BasePicker: React.FC<Props> = ({
     return arr;
   }, [start, end, mode, format]);
 
-  const onChangeCallback = useReactCallback((selected: number) => {
-    onChange(mode, data[selected]);
+  const onSelectedCallback = useReactCallback((selected: number) => {
+    onSelected(mode, data[selected]);
   });
 
   return (
     <View style={styles.container}>
       <PickerView
         {...rest}
-        onChange={onChangeCallback}
+        onSelected={onSelectedCallback}
         selected={current - start}
         data={data}
       />

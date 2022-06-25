@@ -1,16 +1,6 @@
-import { withPicker, Picker } from 'react-native-repicker';
-import { darkly } from 'rn-darkly';
+import { withPicker } from 'react-native-repicker';
 import { DateTimePickerView } from './DateTimePickerView';
 
 export { DateTimePickerView };
 
-const DateTimePickerInternal = withPicker(DateTimePickerView);
-
-export const DateTimePicker = darkly(
-  DateTimePickerInternal,
-  'tintColor',
-  'overlayColor',
-);
-
-// @ts-ignore
-DateTimePicker.defaultProps = Picker.defaultProps;
+export const DateTimePicker = withPicker(DateTimePickerView);

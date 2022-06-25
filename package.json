@@ -1,19 +1,18 @@
 {
   "name": "react-native-datetime-repicker",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "private": false,
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
   "scripts": {
     "ios": "react-native run-ios",
     "build": "rimraf ./dist; rollup -c rollup.config.js",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "rollup -c rollup.config.js"
   },
   "dependencies": {
     "@liuyunjs/hooks": "^1",
     "dayjs": "*",
-    "react-native-repicker": "^2",
-    "rn-darkly": "^2"
+    "react-native-repicker": "^2.1.2"
   },
   "peerDependencies": {
     "react": "17.0.1",
