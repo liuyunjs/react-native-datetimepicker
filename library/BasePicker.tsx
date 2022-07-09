@@ -17,7 +17,7 @@ export type Mode =
 
 export type Props = Omit<
   React.ComponentProps<typeof PickerView>,
-  'onSelected' | 'data' | 'selected' | 'onChange'
+  'onSelected' | 'data' | 'selected'
 > & {
   start: number;
   end: number;
